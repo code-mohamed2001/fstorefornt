@@ -70,8 +70,10 @@ class CustomerAdmin(admin.ModelAdmin):
                     'membership', 'number_of_orders']
     list_editable = ['membership']
     list_per_page = 20
-    ordering = ['first_name', 'last_name']
+    list_select_related = ['user']
+    ordering = ['user__first_name', 'user__last_name']
     search_fields = ['first_name__istartswith', 'last_name__istartswith']
+    autocomplete_fields=['user']
 
     @admin.display(ordering='number_of_orders')
     def number_of_orders(self, customer):

@@ -6,14 +6,15 @@ name = "pypi"
 [packages]
 django = "*"
 django-debug-toolbar = "*"
-pymysql = "*"
 djangorestframework = "*"
 drf-nested-routers = "*"
 django-filter = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
+pillow = "*"
 
 [dev-packages]
+autopep8 = "*"
 
 [requires]
-python_version = "3.14"
+python_version = "3.9"
